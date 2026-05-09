@@ -1,7 +1,7 @@
 # Ansible Playbook and Running it on a Remote Server to Install or Update Packages
 sudo apt update -y
 sudo apt install ansible -y
-
+# if on AWS EC2 update All ICMP rules in security group to allow ssh and ansible traffic
 pip install ansible
 SSh user@remote_server_ip #verify connectivity
 # copy package.yaml from repo or create
