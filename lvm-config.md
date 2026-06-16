@@ -20,7 +20,7 @@ Logical volume
 
     lvdisplay vgname/volumename #shows info of a logical volume volumenam contained in vgname volume group
 
-    Before use a lv, a file system must be created on it
+Before use a lv, a file system must be created on it
 
     blkid /dev/vgname/volumename #shows the UUID of a formatted volume group
 
@@ -29,3 +29,9 @@ Logical volume
 `-r` is used to resize file system
 
     lvreduce -L -1G -r vgname/volumename 
+
+    ```text
+pvcreate /dev/sdb1
+pvs # lists available physical volumes
+pvdisplay /dev/sdb1 # shows info of a physical volume
+```
