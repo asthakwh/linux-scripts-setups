@@ -1,38 +1,50 @@
-# =========================
+=========================
 # LVM Configuration Steps
-# =========================
-
+`mount` shows mounted volumes
+`mount -a` reloads /etc/fstab
 
 1 Create Physical Volume (PV)
     
     sudo pvcreate /dev/nvme1n1
 
-# Verify PV
-sudo pvs
+ Verify PV
+    
+    sudo pvs
 
-# 2. Create Volume Group (VG)
-sudo vgcreate vg1 /dev/nvme1n1
+Create Volume Group (VG)
+    
+    sudo vgcreate vg1 /dev/nvme1n1
 
-# Verify VG
-sudo vgs
+Verify VG
+    
+    sudo vgs
 
-# 3. Create Logical Volume (LV)
-sudo lvcreate -L 3G -n lvm1 vg1
+Create Logical Volume (LV)
+    
+    sudo lvcreate -L 3G -n lvm1 vg1
 
-# Verify LV
-sudo lvs
+Verify LV
+    
+    sudo lvs
 
-# 4. Format Logical Volume with ext4 filesystem
-sudo mkfs.ext4 /dev/vg1/lvm1
+Format Logical Volume with ext4 filesystem
+    
+    sudo mkfs.ext4 /dev/vg1/lvm1
 
-# 5. Create Mount Point
-sudo mkdir -p /dir1
+Create Mount Point
+    
+    sudo mkdir -p /dir1
 
-# 6. Mount Logical Volume
-sudo mount /dev/vg1/lvm1 /dir1
+Mount Logical Volume
+    
+    sudo mount /dev/vg1/lvm1 /dir1
 
-# 7. Verify Mount
-df -h | grep lvm1
+Verify Mount
+    
+    df -h | grep lvm1
+
+now understand cmds of volumes
+
 Physical Volume
 
     pvcreate /dev/sdb1
