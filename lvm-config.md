@@ -1,7 +1,7 @@
 Physical Volume
 
     pvcreate /dev/sdb1
-    pvs # *lists available physical volumes*
+    pvs *#lists available physical volumes*
     pvdisplay /dev/sdb1 #shows info of a physical volume
 
 Volume Group
