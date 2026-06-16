@@ -3,7 +3,7 @@
 # =========================
 
 
-1. Create Physical Volume (PV)
+1 Create Physical Volume (PV)
     
     sudo pvcreate /dev/nvme1n1
 
