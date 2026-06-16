@@ -30,7 +30,7 @@ Before use a lv, a file system must be created on it
 
     lvreduce -L -1G -r vgname/volumename 
 
-    ```text
+```text
 pvcreate /dev/sdb1
 pvs # lists available physical volumes
 pvdisplay /dev/sdb1 # shows info of a physical volume
